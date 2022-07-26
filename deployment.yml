@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: myapp-deployment
-        image: nginx:latest
+        image: cjameshill/node-docker-demo:latest
         ports:
-        - containerPort: 8080
+        - containerPort: 3000

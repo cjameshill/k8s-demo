@@ -14,9 +14,9 @@ spec:
     spec:
       containers:
       - name: myapp-deployment
-        image: nginx:latest
+        image: cjameshill/node-docker-demo:latest
         ports:
-        - containerPort: 8080
+        - containerPort: 3000
 ---
 apiVersion: v1
 kind: Service
@@ -26,7 +26,7 @@ spec:
   type: LoadBalancer
   ports:
   - port: 80
-    targetPort: 8080
+    targetPort: 3000
     protocol: TCP
   selector:
     app: myapp-deployment
