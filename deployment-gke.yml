@@ -25,8 +25,8 @@ metadata:
 spec:
   type: LoadBalancer
   ports:
-  - port: 8080
-    targetPort: 80
+  - port: 80
+    targetPort: 8080
     protocol: TCP
   selector:
     app: myapp-deployment
